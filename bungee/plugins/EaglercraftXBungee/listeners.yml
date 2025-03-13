@@ -8,18 +8,11 @@ listener_01:
   forward_ip: false
   forward_ip_header: X-Real-IP
   redirect_legacy_clients_to: 'null'
-  server_icon: server-icon.png
+  server_icon: IMG_1027.png
   server_motd:
-  - '&6An EaglercraftX server'
+  - '@atypicalpotato on youtube'
   allow_motd: true
   allow_query: true
-  min_minecraft_protocol: 47
-  max_minecraft_protocol: 340
-  allow_protocol_v3: true
-  allow_protocol_v4: true
-  protocol_v4_defrag_send_delay: 10
-  use_haproxy_protocol: false
-  allow_cookie_revoke_query: true
   request_motd_cache:
     cache_ttl: 7200
     online_server_list_animation: false
@@ -27,16 +20,15 @@ listener_01:
     online_server_list_trending: true
     online_server_list_portfolios: false
   http_server:
-    enabled: false
-    root: 'web'
+    enabled: true
+    root: '../../web'
     page_404_not_found: 'default'
     page_index_name:
     - 'index.html'
     - 'index.htm'
-  allow_voice: false
   ratelimit:
     ip:
-      enable: true
+      enable: false
       period: 90
       limit: 60
       limit_lockout: 80
@@ -45,7 +37,7 @@ listener_01:
       - '127.*'
       - '0:0:0:0:0:0:0:1'
     login:
-      enable: true
+      enable: false
       period: 50
       limit: 5
       limit_lockout: 10
@@ -54,7 +46,7 @@ listener_01:
       - '127.*'
       - '0:0:0:0:0:0:0:1'
     motd:
-      enable: true
+      enable: false
       period: 30
       limit: 5
       limit_lockout: 15
@@ -63,7 +55,7 @@ listener_01:
       - '127.*'
       - '0:0:0:0:0:0:0:1'
     query:
-      enable: true
+      enable: false
       period: 30
       limit: 15
       limit_lockout: 25
